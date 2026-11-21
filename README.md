@@ -1,9 +1,9 @@
-# CatSense: Predicting Cat Fearfulness for Shelter Decision Support
+# CatGPT: Predicting Cat Fearfulness for Shelter Decision Support
 
 DSAI 310 Final Project, Fall 2026, American University of Bahrain
 Alya Altawash (F2300202), Wajd Alballal (F2300050), Shadow Alghamdi (F2300047)
 
-CatSense predicts whether a cat has **lower or higher fearfulness** from owner-reported behaviour and
+CatGPT predicts whether a cat has **lower or higher fearfulness** from owner-reported behaviour and
 demographic data. A shelter could use the prediction as one extra input when matching cats with adopters.
 A supporting image module, adapted from the
 [DeepCat / Cat-Emotional-Analysis](https://ieeexplore.ieee.org/document/10479630) project, detects a cat in
@@ -125,7 +125,7 @@ dataset contains non-cat images, such as dogs and horses, and these are removed.
 
 ## What we took from DeepCat and what we changed
 
-| DeepCat | CatSense |
+| DeepCat | CatGPT |
 |---|---|
 | YOLOv5 custom weights for eyes, ears, tail and mouth (weights not published) | COCO-pretrained YOLOv8m detects whole cats; the highest-confidence box is kept (`list_spilter_Images` logic) |
 | Hand-written OpenCV rules (eye white ratio, tail angle) | Learned classifiers (ResNet-50 embeddings + LR, fine-tuned ResNet-18) evaluated on a held-out split |

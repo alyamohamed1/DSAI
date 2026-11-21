@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+# Large downloads: recreate with scripts/download_data.py
+data/images/
+data/raw/*.xlsx
+# Regenerable artefacts
+reports/results/vision_embeddings_*.npz
+models/*.pt
+yolov8*.pt

@@ -1,0 +1,35 @@
+sampled: {'Happy': 1500, 'Relaxed': 1500, 'Aggressive': 707, 'Sad': 465}
+  detected 0/4172
+  detected 500/4172
+  detected 1000/4172
+  detected 1500/4172
+  detected 2000/4172
+  detected 2500/4172
+  detected 3000/4172
+  detected 3500/4172
+  detected 4000/4172
+            images  cat_found_rate  multi_cat_rate
+label                                             
+Aggressive     707        0.892504        0.031117
+Happy         1500        0.938000        0.058000
+Relaxed       1500        0.982667        0.042667
+Sad            465        0.655914        0.012903
+train=2595 val=458 test=764
+embedded 7634 images in 108.8s
+baseline (majority)          val_f1=0.139 test_f1=0.139
+logreg_full_image            val_f1=0.435 test_f1=0.399
+logreg_yolo_crop             val_f1=0.447 test_f1=0.434
+epoch 1/6 loss=1.2916
+epoch 2/6 loss=0.8850
+epoch 3/6 loss=0.6423
+epoch 4/6 loss=0.4675
+epoch 5/6 loss=0.2920
+epoch 6/6 loss=0.2308
+finetuned_resnet18_crop      val_f1=0.517 test_f1=0.515
+selected by validation: finetuned_resnet18_crop
+                  model  val_macro_f1  accuracy  balanced_accuracy  macro_precision  macro_recall  macro_f1  weighted_f1  train_time_s  predict_ms_per_image
+    baseline (majority)         0.139     0.386              0.250            0.097         0.250     0.139        0.215         0.000                 0.000
+      logreg_full_image         0.435     0.433              0.417            0.392         0.417     0.399        0.439         8.542                 0.008
+       logreg_yolo_crop         0.447     0.457              0.456            0.423         0.456     0.434        0.460         2.912                 0.004
+finetuned_resnet18_crop         0.517     0.542              0.514            0.518         0.514     0.515        0.542       213.841                 4.297
+exit=0
